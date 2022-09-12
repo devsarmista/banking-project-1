@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>loan</title>
+</head>
+<body>
+    <div class="hero">
+         <h1>Type Of Loans</h1>
+         <div class="loans">
+            <div id="slide">
+                <div class="card">
+                    <div class="profile"> 
+                       <img src="gold-loan.jpg">
+                       <div>
+                           <h3>Gold Loan</h3>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Laudantium cum provident sequi <br>possimus optio vitae, inventore esse debitis suscipit commodi maiores ducimus,dolorem <br>cupiditate eaque neque. Accusamus rerum odio error.</p>
+                </div>
+                <div class="card">
+                    <div class="profile"> 
+                       <img src="business.jpg">
+                       <div>
+                           <h3>Business Loan</h3>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Laudantium cum provident sequi <br>possimus optio vitae, inventore esse debitis suscipit commodi maiores ducimus,dolorem <br>cupiditate eaque neque. Accusamus rerum odio error.</p>
+                </div>
+                <div class="card">
+                    <div class="profile"> 
+                       <img src="auto-loans.jpg">
+                       <div>
+                           <h3>AUTO Loan</h3>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Laudantium cum provident sequi <br>possimus optio vitae, inventore esse debitis suscipit commodi maiores ducimus,dolorem <br>cupiditate eaque neque. Accusamus rerum odio error.</p>
+                </div>
+                <div class="card">
+                    <div class="profile"> 
+                       <img src="home-loan.jpg">
+                       <div>
+                           <h3>Home Loan</h3>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Laudantium cum provident sequi <br>possimus optio vitae, inventore esse debitis suscipit commodi maiores ducimus,dolorem <br>cupiditate eaque neque. Accusamus rerum odio error.</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <img src="up.jpg" id="upArrow">
+                <img src="downarrow.jpg" id="downArrow">
+
+            </div>
+         </div>
+         <a href="index.html"><button style="margin: 20px; border-radius: 25%; padding: 5px; background: aqua;"> Back To Home Page</button></a>
+
+    </div>
+    <script>
+        var slide=document.getElementById("slide");
+        var upArrow=document.getElementById("upArrow");
+        var downArrow=document.getElementById("downArrow");
+
+        let x=0;
+        downArrow.onclick=function(){
+            if(x>"-900"){
+            x=x-300;
+            slide.style.top=x+"px";    
+            }    
+        }
+        upArrow.onclick=function(){
+            if(x < 0){
+            x=x+300;
+            slide.style.top=x+"px";    
+            }   
+        }
+    </script>
+
+</body>
+</html>
