@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deposits</title>
+    <style>
+        body{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+        #form-container{
+            background-color: blueviolet;
+            padding: 100px;
+            border-radius: 50px;
+            height: 300px;
+            width: 300px;
+            
+
+        }
+        #main-page a button{
+            background-color:rgb(100, 100, 166);
+            padding: 10px;
+            margin: 100px;
+            border-radius: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="form-container">
+        <h2>FD & RD A/C Opening Form</h2>
+        <form action="#" onsubmit="return validation()">
+            <label>First Name</label>
+            <input type="text" placeholder="First Name" id="fname">
+            <span id="name"></span><br><br>
+            <label>Last Name</label>
+            <input type="text" placeholder="Last Name" id="lname">
+            <span id="nam"></span><br><br>
+            <label>Gender</label>
+            <input type="radio" name="Gender">Male
+            <input type="radio" name="Gender">Female
+            <br><br>
+            <label>Amount</label>
+            <input type="number" placeholder="Amount Rs." id="amount">
+            <span id="rupe"></span><br><br>
+            <label>Time  Period</label>
+            <input type="number" placeholder="Period" id="time">
+            <span id="num"></span><br><br>
+            <input type="submit" value="save">
+        </form>
+    </div>
+    <div id="main-page">
+        <a href="submit.html"><button>Submit Application</button></a>
+        <a href="index.html"><button>Go Back To Home Page</button></a>
+    </div>
+    <script type="text/javascript">
+
+       function validation(){
+        var fname=document.getElementById('fname').value;
+        var lname=document.getElementById('lname').value;
+        var amount=document.getElementById('amount').value;
+        var time=document.getElementById('time').value;
+
+        if (fname==""){
+            document.getElementById('name').innerHTML="Please fill the name";
+            return false;
+        }   
+        if ((fname.length<=2) || (fname.length>20)){
+            document.getElementById('name').innerHTML="Fiirst name must be between 2 to 20";
+            return false;
+        }
+        if(!isNaN(fname)){
+            document.getElementById('name').innerHTML="Only characters are allowed";
+            return false;
+        }
+        
+        if (lname==""){
+            document.getElementById('nam').innerHTML="Please fill the name";
+            return false;
+        }
+        if ((lname.length<=2) || (lname.length>20)){
+            document.getElementById('nam').innerHTML="last name must be between 2 to 20";
+            return false;
+        }
+        if(!isNaN(lname)){
+            document.getElementById('nam').innerHTML="Only characters are allowed";
+            return false;
+        }
+        if (amount==""){
+            document.getElementById('rupe').innerHTML="Please fill the amount";
+            return false;
+        }
+        if(isNaN(amount)){
+            document.getElementById('rupe').innerHTML="Only digits allowed";
+            return false;
+        }
+        if (time==""){
+            document.getElementById('num').innerHTML="Please fill the period";
+            return false;
+        }
+        if(isNaN(time)){
+            document.getElementById('num').innerHTML="Only digits allowed";
+            return false;
+        }
+
+       }
+
+
+    </script>
+</body>
+</html>
