@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>cards</title>
+
+</head>
+<body>
+    <a href="index.html"><button style="margin: 20px; border-radius: 25%; padding: 5px; background: aqua;"> Back To Home Page</button></a>
+
+    <div class="full-img" id="fullImgBox">
+        <img src="Easy-metal-card_0.png" id="fullImg">
+        <span onclick="closeFullImg()">x</span>
+    </div>
+<div class="img-gallery">
+    <img src="Easy-metal-card_0.png" onclick="openFullImg(this.src)">
+    <img src="Full-metal-card.jpg" onclick="openFullImg(this.src)">
+    <img src="Hybrid-metal-card.jpg"  onclick="openFullImg(this.src)">
+    <img src="Compact-card.png"  onclick="openFullImg(this.src)">
+    <img src="images (1).jpg"  onclick="openFullImg(this.src)">
+    <img src="images.jpg"  onclick="openFullImg(this.src)">
+</div>
+
+<script>
+    var fullImgBox=document.getElementById("fullImgBox");
+    var fullImg=document.getElementById("fullImg");
+
+    function openFullImg(pic){
+        fullImgBox.style.display="flex";
+        fullImg.src=pic;
+    }
+    function closeFullImg (){
+        fullImgBox.style.display="none"
+    }
+</script>
+
+</body>
+</html>
